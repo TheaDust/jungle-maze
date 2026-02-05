@@ -11,26 +11,27 @@ export const COLORS = {
   FOG: '#000000',
 };
 
-// 12x12 Pixel Art - 1 = Brown, 2 = Face/Beige, 0 = Transparent
-// Updated to show Head + Body structure (Side Profile facing right)
+// 12x12 Pixel Art - 1 = Brown, 2 = Face/Beige, 3 = Dark Brown (Eyes), 0 = Transparent
+// Updated: Tail lowered (peaks at row 3 instead of 2). Eyes changed to dark brown.
 export const MONKEY_SPRITE = [
-  [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0], // Head Top
-  [0, 0, 0, 0, 1, 1, 2, 2, 0, 0, 0, 0], // Forehead / Face
-  [0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0], // Snout / Mouth
-  [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0], // Neck
-  [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0], // Back / Shoulders
-  [0, 0, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0], // Body / Hand reaching out
-  [0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0], // Tail base / Belly
-  [1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], // Tail curl / Thighs
-  [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], // Tail tip / Legs
-  [0, 0, 0, 0, 2, 2, 0, 2, 2, 0, 0, 0], // Feet
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], // Head Top
+  [0, 0, 0, 0, 1, 2, 2, 2, 2, 1, 0, 0], // Ears out, Forehead
+  [0, 0, 0, 0, 1, 2, 3, 2, 3, 1, 0, 0], // Face, Eyes (Tail removed from here)
+  [0, 0, 1, 1, 0, 2, 2, 2, 2, 0, 0, 0], // Tail tip (Lowered), Cheeks
+  [0, 1, 0, 0, 0, 1, 2, 2, 1, 0, 0, 0], // Tail curve, Chin
+  [1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0], // Tail mid, Neck
+  [0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0], // Tail connect, Body, Hand
+  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0], // Belly
+  [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], // Legs
+  [0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0], // Legs
+  [0, 0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0], // Feet
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 export const MONKEY_COLORS: Record<number, string> = {
   1: '#8B4513', // SaddleBrown
   2: '#FFE4C4', // Bisque
+  3: '#3C2A20', // Dark Coffee Brown (Softer Eyes)
 };
 
 // 12x12
